@@ -1,6 +1,8 @@
 # 概要
 Javascriptのthisには癖があるのでそれについてまとめておく
-基本的には
+
+次の箇所も参考にすること
+- https://github.com/tsuyopon/javascript/tree/master/STUDY/kaigan/chap6
 
 # 参考
 次の４つのパターンについてコードがあるが、基本的にはthisの呼び出し元に気をつけろに帰着する。
