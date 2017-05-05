@@ -9,7 +9,7 @@ Javascriptには様々な構文チェックツールがありますが、ここ�
 
 # パッケージインストール
 ```
-$ npm instll eslint
+$ npm install eslint
 ```
 
 # 使い方
@@ -24,8 +24,10 @@ $ nodejs node_modules/.bin/eslint test.js
 ```
 
 ESLintの設定などを変更するには次の２つのファイルを変更します。
-- .eslintrc
-- .eslintrc.json
+- .eslintrc ( ESLintの内部的には「.eslintrc.*」で検知されるので.eslintrc.jsonなども検知される)
+  - eslintrcの設定を記述する
+- .eslintignore
+  - 対象から無視したいファイルやディレクトリを追加する
 
 
 # トラブルシュート
@@ -61,3 +63,5 @@ $ ~/node-v6.10.3-linux-x64/bin/node node_modules/.bin/eslint test.js
 # 参考URL
 - 公式サイト
   - http://eslint.org/docs/user-guide/getting-started
+- configファイル設定ドキュメント
+  - http://eslint.org/docs/user-guide/configuring
