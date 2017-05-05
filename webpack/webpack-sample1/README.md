@@ -27,6 +27,8 @@ bundle.js
 入力先はsrc/main.js、出力先はtmp/output.jsとなります。tmpディレクトリは自動的に生成されます。
 ```
 $ node node_modules/.bin/webpack
+$ ls tmp/output.js 
+tmp/output.js
 ```
 
 package.jsonのscript部にもwebpack用の処理を追加しています。
