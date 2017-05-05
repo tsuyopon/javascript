@@ -39,6 +39,26 @@ src/const.js -> lib/const.js
 src/pow.js -> lib/pow.js
 ```
 
+一括で入力させるディレクトリを指定して、出力先を1ファイルに集中させたい場合
+```
+$ babel src --out-file script-compiled.js
+```
+
+特定のファイルを無視する場合
+```
+$ babel src --out-dir lib --ignore spec.js,test.js
+```
+
+修正されたことを検知してトランスパイルしたい場合
+```
+$ babel script.js --watch --out-file script-compiled.js
+```
+
+.babelrcを無視して実行する場合
+```
+$ babel --no-babelrc script.js --presets=es2015,react
+```
+
 # その他
 
 ### sourceMapについて
@@ -71,3 +91,5 @@ $ nodejs node_modules/.bin/babel index.js
 
 - 参考
   - http://stackoverflow.com/questions/33509816/what-exactly-does-usr-bin-env-node-do-at-the-beginning-of-node-files
+  - https://babeljs.io/docs/usage/cli/
+    - babelコマンドラインいろいろ
