@@ -2,6 +2,17 @@
 Karmaを使ったヘッドレスブラウザテストのサンプル。
 ここではヘッドレスブラウザとしてPhantomJSを選択しています。
 
+# インストール
+karma本体を入れます。
+```
+$ npm install karma
+```
+
+今回はヘッドレスブラウザとしてphantomjsを利用するので本体とそれを利用するためのプラグイン(launcher)を入れます。
+```
+$ npm install phantomjs karma-phantomjs-launcher
+```
+
 # 初期セットアップ
 次のコマンドを実行してkarma.conf.jsが生成される。
 ```
