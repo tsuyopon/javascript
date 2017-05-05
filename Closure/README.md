@@ -13,7 +13,7 @@ Javascriptのクロージャについて
 - (1)
   - sample1.js
 - (2)
-  - sample2.js, sample2-1.js
+  - sample2-1.js, sample2-2.js
 - (3)
   - sample3.js, sample4.js
 - (4)
