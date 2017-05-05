@@ -31,6 +31,16 @@ body {
   color: #3d3d3d; }
 ```
 
+# MEMO
+- ファイルを更新したら自動コンパイルする
+```
+node-sass test.scss test.css -w
+```
+- 本番公開時に圧縮コンパイルする場合
+```
+$ node-sass test.scss test.css --output-style compressed
+```
+
 # 参考URL
 - https://github.com/sass/node-sass
 
