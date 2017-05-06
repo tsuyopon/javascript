@@ -1,5 +1,6 @@
 # 概要
-Browserifyを使うと、Node.jsと同じCommonJS Modulesで書かれたJavaScriptのファイルをブラウザで利用することができるようになります。
+Browserifyを使うと、Node.jsと同じCommonJS Modulesで書かれたJavaScriptのファイルをブラウザで利用することができるようになります。  
+CommonJSというのは主にサーバーサイドJavaScriptの仕様を統一するための仕様で、その中の一部にModulesがあります。  
 - CommonJS
   - http://www.commonjs.org/
 
@@ -33,3 +34,4 @@ $ node node_modules/.bin/browserify js/main.js -o bundle.js
   - https://github.com/substack/node-browserify
 - CommonJS
   - http://www.commonjs.org/
+ 

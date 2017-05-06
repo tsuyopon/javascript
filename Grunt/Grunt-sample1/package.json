@@ -1,0 +1,17 @@
+{
+  "name": "Grunt-sample1",
+  "version": "0.0.0",
+  "description": "サンプルとしてsassをコンパイルするgruntの例",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-sass": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
