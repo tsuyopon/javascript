@@ -1,0 +1,15 @@
+{
+  "name": "sinon",
+  "version": "0.0.0",
+  "description": "JavaScriptでスパイ、スタブ、モックなどのテストダブルを行ないたい場合にはsinonが利用できる。",
+  "main": "sample.js",
+  "dependencies": {
+    "sinon": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
