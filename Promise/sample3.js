@@ -1,6 +1,9 @@
+// メソッドチェーンについて理解する
+// (1)と(2)の違いを理解する。(1)だとthenブロックの関数が同時にそれぞれ呼ばれるのに対して、(2)のメソッドチェーンの場合だと順番どおりに実行する
+
 var Promise = require('es6-promise').Promise;
 
-// 1: それぞれの `then` は同時に呼び出される
+// (1): それぞれの `then` は同時に呼び出される
 var aPromise = new Promise(function (resolve) {
     resolve(100);
 });
@@ -16,7 +19,7 @@ aPromise.then(function (value) {
 
 // vs
 
-// 2: `then` はpromise chain通り順番に呼び出される
+// (2): `then` はpromise chain通り順番に呼び出される
 var bPromise = new Promise(function (resolve) {
     resolve(100);
 });

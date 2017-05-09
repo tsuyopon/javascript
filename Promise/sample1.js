@@ -1,4 +1,8 @@
 // Promiseの最小サンプル
+// 手順としては
+//   1. new Promiseを実行する。
+//   2. 成功時としてresolveをコールする
+//   3. resolveが呼ばれるとthenが呼ばれる。(rejectの場合だとcatchが呼ばれる)
 
 var Promise = require('es6-promise').Promise;
 function asyncFunction() {
@@ -7,7 +11,7 @@ function asyncFunction() {
     return new Promise(function (resolve, reject) {
         setTimeout(function () {
             // 成功
-            resolve('Async Hello world');
+            resolve('Async Hello world');   // ここでresolveをコールしています。
         }, 1000);
     }); 
 }

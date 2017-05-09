@@ -1,4 +1,6 @@
 // HTTPにアクセスしてその結果に応じて処理を出し分けるサンプル
+//  1. XMLHttpRequestの取得したレスポンスコードが200ならばresolve、それ以外のステータスコードやonerrorの場合にはrejectが呼ばれます。
+//  2. resolveが呼ばれたらthenを呼び、rejectが呼ばれたらcatchが呼ばれます
 
 var Promise = require('es6-promise').Promise;
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
