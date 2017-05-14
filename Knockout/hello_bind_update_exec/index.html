@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    パラメータに指定された Observable の値が変更されたときに処理を実行する</br>
+    <div data-bind="myBinding: message"></div>
+
+    <input type="text" data-bind="value: message" />
+  </body>
+</html>

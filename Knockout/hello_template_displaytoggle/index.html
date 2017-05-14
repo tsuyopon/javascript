@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    条件によって表示・非表示を切り替える</br>
+    <div data-bind="template: {name: 'myTemplate', if: false}">
+    </div>
+
+    <hr>
+
+    <div data-bind="template: {name: 'myTemplate', if: true}">
+    </div>
+
+    <script type="text/html" id="myTemplate">
+      <h3>Template Block</h3>
+    </script>
+  </body>
+</html>

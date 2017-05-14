@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    <ul data-bind="foreach: {data: array, as: 'element'}">
+      <li data-bind="text: element"></li>
+    </ul>
+  </body>
+</html>

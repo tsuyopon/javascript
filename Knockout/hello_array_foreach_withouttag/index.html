@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    HTML要素をつかわずにforeachするサンプルプログラムです。
+    <ul>
+      <!-- ko foreach: array -->
+      <li data-bind="text: $data"></li>
+      <!-- /ko -->
+    </ul>
+  </body>
+</html>

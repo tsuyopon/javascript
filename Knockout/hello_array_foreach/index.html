@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    <ul data-bind="template: {name: 'myTemplate', foreach: array}">
+    </ul>
+
+    <script type="text/html" id="myTemplate">
+      <li data-bind="text: message"></li>
+    </script>
+  </body>
+</html>

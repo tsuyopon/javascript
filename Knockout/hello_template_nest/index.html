@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    テンプレートがネストされているときに、親テンプレートの値を参照する</br>
+    <div data-bind="template: {name: 'parentTemplate', data: parentModel, as: 'parent'}">
+    </div>
+
+    <script type="text/html" id="parentTemplate">
+      <div data-bind="template: {name: 'childTemplate', data: childModel}">
+      </div>
+    </script>
+
+    <script type="text/html" id="childTemplate">
+      parent.name = <span data-bind="text: parent.name"></span><br>
+      child.name = <span data-bind="text: name"></span>
+    </script>
+  </body>
+</html>

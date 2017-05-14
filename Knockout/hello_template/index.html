@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    <div data-bind="template: {name: 'myTemplate', data: myModel}"><!-- ここのtemplateに指定。data パラメタには、テンプレート内で参照できるモデルを指定する。-->
+    </div>
+
+    <script type="text/html" id="myTemplate"><!-- ここにテンプレートを埋め込める。このidをdata-bindのtemplateで指定した箇所に指定する -->
+      <i data-bind="text: message"></i>
+    </script>
+  </body>
+</html>
+

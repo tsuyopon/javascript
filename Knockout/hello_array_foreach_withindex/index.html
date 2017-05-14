@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    <ul data-bind="foreach: array">
+      <li>
+	    <!-- $indexでインデックス値を参照し、各要素は$dataで参照できる -->
+        <span data-bind="text: $index"></span> : <span data-bind="text: $data"></span>
+      </li>
+    </ul>
+  </body>
+</html>

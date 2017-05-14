@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    with バインディングを使用すると、新しいコンテキストを定義できる。コンテナレス構文で使用することも可能。</br>
+    <span data-bind="text: message"></span>
+
+    <div data-bind="with: subContext">
+      <span data-bind="text: message"></span>
+    </div>
+  </body>
+</html>

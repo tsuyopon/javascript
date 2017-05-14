@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    特定のボタンにおけるコンテキストを取得できる。コンソールを確認してみてください。</br>
+    <button data-bind="click: onClick">root</button>
+    <div data-bind="with: sub">
+      <button data-bind="click: onClick">sub</button>
+    </div>
+    <div data-bind="with: sub2">
+      <button data-bind="click: onClick">sub2</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    <select size="3" multiple
+            data-bind="options: array,
+                       selectedOptions: selectedArray"></select><!-- 初期値にはselectedOptionsパラメタを指定して、選択対象にする配列を引き渡す -->
+  </body>
+</html>

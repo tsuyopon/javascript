@@ -1,0 +1,20 @@
+{
+  "name": "Knockout",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "tsuyopon <tsuyoppy@r2.dion.ne.jp>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "^3.4.2"
+  }
+}

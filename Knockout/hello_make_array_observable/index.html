@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    <ul data-bind="foreach: array">
+      <li data-bind="text: $data"></li>
+    </ul>
+
+    <button id="add">add</button>
+    <button id="remove">remove</button>
+  </body>
+</html>

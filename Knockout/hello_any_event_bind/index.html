@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    正方形にmouse-over, mouse-outしてconsole.logの出力でイベントにバインディングできていることを確認してください。</br>
+    <div data-bind="event: param">
+    </div>
+  </body>
+</html>
+
