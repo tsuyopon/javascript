@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    <span data-bind="text: screen.height"></span>
+    <span data-bind="text: myObj.name"></span><!-- 'taro'が出力される -->
+	<span data-bind="text: myObj.func()"></span><!-- 'hoge'が出力される -->
+  </body>
+</html>
