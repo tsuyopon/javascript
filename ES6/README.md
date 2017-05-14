@@ -10,7 +10,7 @@ babelというパッケージはbabel-cliというパッケージに変わった
 
 次のコマンドで必要なnpmパッケージをインストールします。
 ```
-$ npm install --save-dev babel-cli babel-preset-es2015 babel-preset-es2016
+$ npm install --save-dev babel-cli babel-preset-es2015
 ```
 
 # 実行方法
@@ -18,7 +18,6 @@ $ npm install --save-dev babel-cli babel-preset-es2015 babel-preset-es2016
 es2016を指定するとES6への変換なのでclassなどがファイルに記述されていても変化しませんが、es2015を指定するとclassなどは適切にトランスパイルされます。
 ```
 $ nodejs node_modules/.bin/babel test.js --presets es2015      // for ES6
-$ nodejs node_modules/.bin/babel test.js --presets es2016      // for ES7
 ```
 
 このpresetsの指定は毎回コマンドラインで指定しなくても、.babelrcで常にオプションとして指定することができます。
@@ -93,3 +92,7 @@ $ nodejs node_modules/.bin/babel index.js
   - http://stackoverflow.com/questions/33509816/what-exactly-does-usr-bin-env-node-do-at-the-beginning-of-node-files
   - https://babeljs.io/docs/usage/cli/
     - babelコマンドラインいろいろ
+
+# TODO
+- この辺をひとめぐりしたい
+  - http://postd.cc/es6-cheatsheet/

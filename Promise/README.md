@@ -5,6 +5,46 @@ Promiseを使うと
 - 非同期処理を平行・直列に実行させることができます。
 
 
+# Promiseをつかわない場合の問題点
+非同期処理を使うとネストが深くなる。
+```
+fs.readFile( 'file1', function ( error, data1 ) {
+    // data1から次に読み込むファイル名を求める
+    fs.readFile( data1, function ( error, data2 ) {
+        // data2から次に読み込むファイル名を求める
+        fs.readFile( data2, function ( error, data3 ) {
+            // data3を使った処理
+        } );
+    } );
+} );
+```
+
+Promiseを使えばネストが深くなることもなく直感的になります。
+```
+// readFile関数のPromiseを返す関数を作成する
+function readFile( ...args ) {
+    return new Promise( function ( resolve, reject ) {
+        fs.readFile( ...args, function ( error, data ) {
+            if ( error ) reject( error );
+            else resolve( data );
+        } );
+    } );
+}
+ 
+readFile( 'file1' ).then( function ( data1 ) {
+    // data1から次に読み込むファイル名を求める
+    return readFile( data1 );
+} ).then( function ( data2 ) {
+    // data2から次に読み込むファイル名を求める
+    return readFile( data2 );
+} ).then( function ( data3 ) {
+    // data3を使った処理
+} ).catch( function ( error ) {
+    // いずれかのreadFileでエラーがあった場合の処理
+    console.log( error );
+} );
+```
+
 # 基本概念
 - 
 - resolve(arg)やreject(arg)で次に飛ぶthenやcatchなどの引数としてargが渡ります

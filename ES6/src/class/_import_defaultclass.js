@@ -1,4 +1,5 @@
-class Base {
+// 1つのモジュールをexportするときにexport defaultが推奨されている
+export default class Base {
   constructor(name) {
     this.name = name;
   }
@@ -7,11 +8,7 @@ class Base {
   }
 }
  
-class App extends Base {
-  constructor(name = 'nakajmg') {
     super(name);
   }
 }
- 
-var app = new App();
-app.showName();
+
