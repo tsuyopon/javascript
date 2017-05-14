@@ -1,3 +1,5 @@
+// class, constructor, extends, superなど
+
 // class定義やconstructorの概念などがある。
 class Base {
   constructor(name) {

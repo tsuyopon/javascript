@@ -1,3 +1,5 @@
+// アロー演算子(=>)についてpart2
+
 /*
 // before
 var fn = function (a, b) {

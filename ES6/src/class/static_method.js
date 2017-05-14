@@ -1,4 +1,4 @@
-// newでオブジェクトを生成しなくてもメソッド呼び出しができるようになります。
+// newでオブジェクトを生成しなくてもstaticを宣言すればスタティックメソッド呼び出しができるようになります。
 class Human {
   constructor(name) {
     this.name = name;

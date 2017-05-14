@@ -1,3 +1,4 @@
+// デフォルト引数の指定
 function multiply(a, b = 1) {
   return a*b;
 }

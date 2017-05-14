@@ -1,3 +1,5 @@
+// アロー演算子についてpart1
+
 /*
 // Before
 var show = function(text) {

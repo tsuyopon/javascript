@@ -1,3 +1,4 @@
+// 可変長関数は...を使って表すことができる。
 function f(x, ...ys) {
     console.log(x, ys);
 }
