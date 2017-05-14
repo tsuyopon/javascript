@@ -5,6 +5,14 @@ Promiseを使うと
 - 非同期処理を平行・直列に実行させることができます。
 
 
+# 基本概念
+- 
+- resolve(arg)やreject(arg)で次に飛ぶthenやcatchなどの引数としてargが渡ります
+- thenの第２引数としてはreject()時の処理が記述できる。単独で書きたければcatchしてもよい。
+```
+promise.then(onFulfilled, onRejected)
+```
+
 # 実行方法
 次のコマンドで実行することが可能
 ```

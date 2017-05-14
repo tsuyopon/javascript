@@ -23,10 +23,10 @@ aPromise.then(function (value) {
 var bPromise = new Promise(function (resolve) {
     resolve(100);
 });
-bPromise.then(function (value) {
+bPromise.then(function (value) {  // value == 100
     return value * 2;
-}).then(function (value) {
+}).then(function (value) {        // value == 200
     return value * 2;
-}).then(function (value) {
-    console.log("2: " + value); // => 100 * 2 * 2
+}).then(function (value) {        // value == 400
+    console.log("2: " + value);   // => 100 * 2 * 2
 });
