@@ -7,6 +7,11 @@
     <script src="sample.js"></script>
   </head>
   <body>
+
+    <!-- boolean以外の条件で表示をするばあいには関数バインディングするのが良い -->
+    <span data-bind="text: myvalue(100)"></span></br>
+    <span data-bind="text: myvalue(101)"></span></br>
+
     <!-- ko if: isTrue -->
       isTrue(if)
     <!-- /ko -->

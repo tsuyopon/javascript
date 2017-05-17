@@ -16,7 +16,9 @@ Knockout直下に移動するとリンク一覧が表示されるはず
 http://<servername>/Knockout/
 
 
-# 特殊変数
+# 知っておいたほうが良さそうなメモ
+
+### 特殊変数
 特殊変数は知らないとドハマリするので抑えておくと良い。
 - http://knockoutjs.com/documentation/binding-context.html
 - 特殊変数
@@ -30,6 +32,25 @@ http://<servername>/Knockout/
   - $componentTemplateNodes
   - $context
   - $element
+
+### ifとvisibleの違い
+ifの場合
+```
+<span data-bind="if: flag">ほげほげ</span>
+```
+タグの中身が空っぽの状態になる
+```
+<span></span>
+```
+
+続いてvisibleの場合
+```
+<span data-bind="visible: flag">ほげほげ</span>
+```
+要素はそのままだけど、スタイルで非表示にしている
+```
+<span style="display: none;">ほげほげ</span>
+```
 
 # 参考URL
 - 公式サイト
