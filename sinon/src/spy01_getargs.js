@@ -1,5 +1,6 @@
-var sinon = require('sinon');
+// 特定の関数のように呼び出すことができる
 
+var sinon = require('sinon');
 var spy = sinon.spy();
 
 //We can call a spy like a function

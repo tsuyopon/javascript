@@ -1,3 +1,4 @@
+// 時刻を100秒進ませたテストなどを実行することができます。
 var sinon = require('sinon');
 var faketimer = {
     setUp: function () {

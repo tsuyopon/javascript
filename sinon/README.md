@@ -29,6 +29,19 @@ $ vim xxx.html                   // sinon.jsを読み込むように追加する
 $ node xxx.js
 ```
 
+# sinonの公式サイトのサンプルを参考にする
+次のコマンドでセットアップする
+```
+$ git clone https://github.com/sinonjs/sinon    // 試したときのハッシュ値は64d51bef80b20bcab4559aad94e6221d64120d52
+$ cd sinon
+$ npm install
+```
+
+インストールが終わり次第、testディレクトリ中のコマンドは次のコマンドでテストを実行することができます。
+```
+$ npm run test
+```
+
 # URL
 - 公式URL
   - http://sinonjs.org/
