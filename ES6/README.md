@@ -5,6 +5,9 @@ Babelを使うとトランスパイルすることができます。
 - ES2015はES6と呼ばれる(ES5ではないことに注意!!)。正式名称はES2015らしい。
 - ES2016はES7に含まれる
 
+firefoxの資料だがES6に変化したことによって日本語でどのようなことができるようになったのかをざっと俯瞰できる
+- https://developer.mozilla.org/ja/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla
+
 # セットアップ
 babelというパッケージはbabel-cliというパッケージに変わったので注意が必要です。
 
@@ -93,6 +96,15 @@ $ nodejs node_modules/.bin/babel index.js
   - https://babeljs.io/docs/usage/cli/
     - babelコマンドラインいろいろ
 
+# ES6参考
+- ES6対応シート
+  - http://kangax.github.io/compat-table/es6/
+- githubでのES6紹介ページ
+  - https://github.com/lukehoban/es6features
+- 役に立つ資料(ES6を学ぶ上で役に立つリンクが多い)
+  - http://azu.github.io/slide/nodejs-es6/how-to-learn.html
+
 # TODO
 - この辺をひとめぐりしたい
   - http://postd.cc/es6-cheatsheet/
+

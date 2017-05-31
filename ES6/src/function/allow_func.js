@@ -1,7 +1,7 @@
 // アロー演算子についてpart1
 
 /*
-// Before
+// Before (わざわざfunctionというのを書く必要があった)
 var show = function(text) {
   console.log(text);
 }; 
