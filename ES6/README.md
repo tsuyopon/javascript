@@ -103,6 +103,10 @@ $ nodejs node_modules/.bin/babel index.js
   - https://github.com/lukehoban/es6features
 - 役に立つ資料(ES6を学ぶ上で役に立つリンクが多い)
   - http://azu.github.io/slide/nodejs-es6/how-to-learn.html
+- ECMAScript 2015 Language Specification
+  - http://www.ecma-international.org/ecma-262/6.0/
+- ES6の機能とサンプル
+  - http://es6-features.org/#Constants
 
 # TODO
 - この辺をひとめぐりしたい
