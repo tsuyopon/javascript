@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+<h2>変数</h2>
+<!-- エスケープありで出力 -->
+<p><%= @tagline %></p>
+
+<!-- エスケープ無しで出力 -->
+<p><%- @tagline %></p>
+
+<h2>組み込み関数の利用</h2>
+<% now = new Date(); strDate = now.getFullYear() + '年' + (now.getMonth() + 1) + '月' + now.getDate() + '日'; %>
+<%- strDate %> 
+
+
+<h2>If文</h2>
+<% @value1 = 0 %>
+<% if @value1? : %>
+    <label>?で存在確認。false,"",0でも存在すればここです</label>
+<% else if !@value2 : %>
+    <label>[false,0,""+存在しない] を判断したければ!</label> <!-- ?と同じ役割も兼ねます -->
+<% else if @value3 == "2" : %>
+    <label>式で比較。=== は無くて、==で型の一致も見られます。</label>
+<% else : %>
+    <label>該当無し</label>
+<% end %>
+
+<h2>繰り返しfor文</h2>
+<!-- 繰り返しは配列のみです。オブジェクト(map)はダメです -->
+<% @value = [1,2,3] %>
+<% for val in @value : %>
+    <li><%- val %></li>
+<% end %>
+
+
+<h2>繰り返しwhile文</h2>
+<!-- 括弧内がtrueの間繰り返します -->
+<% @start_num = 0 %>
+<% @max_num = 5 %>
+<% while (@start_num++ < @max_num) : %>
+  <li><%- @start_num %></li>
+<% end %>
+
+
+<h2>SWITCH文</h2>
+<% @oauthProvider='facebook' %>
+<% switch @oauthProvider : %>
+    <% when 'facebook' : %>
+        <label>facebook</label>
+    <% end %>
+    <% when 'twitter' : %>
+        <label>twitter</label>
+    <% end %>
+    <% else : %>
+        <label>else</label>
+    <% end %>
+<% end %>
+
+<h2>三項演算子</h2>
+<!-- 三項演算で値を@strに入れます。 -->
+<!-- @valueがあれば"a"。無ければ"b"が出力される -->
+<% @str = if @value then "a" else "b" %>
+<label><%- @str %></label> 
+
+<!-- こちらは変数に代入せず直接画面出力する場合 -->
+<label><%= if @value then "a" else "b" %></label>
+
+
+<h2>パラメータを指定してテンプレートを指定する</h2>
+<% include 'partials/item', { item : 'book', price: '10$' } %>
+
+</body>
+</html>
