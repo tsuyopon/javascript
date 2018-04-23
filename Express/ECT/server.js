@@ -3,22 +3,20 @@
 var express = require('express');
 var app = express();
 
+// ECTを使うための設定
 var ECT = require('ect'); 
-
-// set the view engine to ejs
-//app.set('view engine', 'ejs');
 app.engine('ect', ECT({ watch: true, root: __dirname + '/views', ext: '.ect' }).render);
 app.set('view engine', 'ect');
 
 
-// use res.render to load up an ejs view file
+// use res.render to load up an ect view file
 
-// index page (pages/index.ejs)
+// index page (pages/index.ect)
 app.get('/', function(req, res) {
     res.render('pages/index');
 });
 
-// パラメータ引き渡し(pages/test.ejs)
+// パラメータ引き渡し(pages/test.ect)
 app.get('/test', function(req, res) {
     var drinks = [
         { name: 'Bloody Mary', drunkness: 3 },
@@ -33,11 +31,6 @@ app.get('/test', function(req, res) {
         tagline: tagline,
         flag: flag
     });
-});
-
-// about page 
-app.get('/about', function(req, res) {
-    res.render('pages/about');
 });
 
 app.listen(80);
