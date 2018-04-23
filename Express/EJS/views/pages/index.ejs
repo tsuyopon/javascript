@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include ../partials/header %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <p>Welcome to templating using EJS</p>
+    </div>
+
+<h2>server.jsから渡されたパラメータ引き継ぎ</h2>
+<p><%- title %></p>
+
+
+<h2>テンプレート内での引数埋め込み</h2>
+<% var test = 'EJS! EJS! EJS!'; %>
+<p><%- test %></p>
+
+
+<h2>テンプレート内での引数埋め込みpart2</h2>
+<%
+  var meta = {
+    title: 'special page title',
+    desc: 'This is my favorite page.',
+    ogp: {
+      title: this.title,
+      desc: this.desc,
+      url: 'http://my-special-url.com'
+    }
+  };
+%>
+<p><%= meta.title %> | site title</p>
+
+
+
+<h2>forループ</h2>
+<ul>
+  <% for (var i = 0; i < 3; i++) { %>
+  <li>item<%= i+1 %></li>
+  <% } %>
+</ul>
+
+
+<h2>forEachループ</h2>
+<ul>
+  <% var array = ['aaa', 'bbb', 'ccc', 'ddd', 'eee']; %>
+  <% array.forEach(function (value) { %>
+  <li><%= value %></li>
+  <% }); %>
+</ul>
+
+
+<h2>if文</h2>
+<%
+  var page = {
+    id: '05'
+  }
+%>
+<% if (page.id === '01') { %>
+<p id="page01">page ID : 01</p>
+<% } else if (page.id === '02') { %>
+<p id="page02">page ID : 02</p>
+<% } else { %>
+<p>page not found</p>
+<% } %>
+
+
+</main>
+
+<footer>
+    <% include ../partials/footer %>
+</footer>
+
+</body>
+</html>
