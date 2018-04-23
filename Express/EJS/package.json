@@ -1,8 +1,17 @@
 {
-    "name": "node-ejs",
-    "main": "server.js",
-    "dependencies": {
-        "ejs": "^1.0.0",
-        "express": "^4.6.1"
-    }
+  "name": "ejs",
+  "version": "1.0.0",
+  "description": "EJSとexpressを一緒に使うサンプルです EJSはEmbedded Javascriptの頭文字をとったもので、拡張子としては.ejsを利用します。",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
 }
