@@ -72,5 +72,32 @@
 <h2>パラメータを指定してテンプレートを指定する</h2>
 <% include 'partials/item', { item : 'book', price: '10$' } %>
 
+<h2>ECT内部での関数定義</h2>
+<!-- 1つ挟むとできますね -->
+<% @v.calc=(a,b)=>a+b %>
+<div><%= @v.calc(1,2) %></div>
+
+
+<h2>ECT内部での関数定義 part2</h2>
+<% @hoge = {} %>
+<% @hoge['test1'] = 'TEST1' %>
+<% @hoge['test2'] = 'TEST2' %>
+<% @v.calc=(a,b)=> return b + @hoge[a] + "fuga"  %>
+<div><%= @v.calc("test1","   ") %></div>
+<div><%= @v.calc("test2",@str) %></div>
+
+
+<h2>ECT内部での関数定義(関数から関数を呼び出す) part3</h2>
+<% @v.calc=(a,b)=> @v.calc2(a,b)  %>
+<% @v.calc2=(a,b)=> a+b  %>
+<div><%= @v.calc(3,7) %></div>
+
+
+<h2>ECT内部での関数定義(関数から関数を呼び出す) part4</h2>
+<% @v.calc=()=> @v.calc2() + @v.calc3()  %>
+<% @v.calc2=()=> "hoge\n"  %>
+<% @v.calc3=()=> "fuga"  %>
+<div><%= @v.calc() %></div>
+
 </body>
 </html>

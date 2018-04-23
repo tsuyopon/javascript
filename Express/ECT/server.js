@@ -29,7 +29,8 @@ app.get('/test', function(req, res) {
     res.render('pages/test', {
         drinks: drinks,
         tagline: tagline,
-        flag: flag
+        flag: flag,
+        v: {}
     });
 });
 

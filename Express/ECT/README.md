@@ -38,4 +38,6 @@ close     終了タグです。デフォルトは%>です。
 %%>       %>のエスケープです。%>を出力したい場合に使用します。
 ```
 
-
+# SeeAlso
+- http://ectjs.com/
+- https://github.com/baryshev/ect
