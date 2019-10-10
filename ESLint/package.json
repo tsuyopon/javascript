@@ -4,7 +4,7 @@
   "description": "Javascriptには様々な構文チェックツールがありますが、ここではESLintについて - JSLint - JSHint - ESLint - JSCS",
   "main": "test.js",
   "dependencies": {
-    "eslint": "^3.19.0"
+    "eslint": "^6.5.1"
   },
   "devDependencies": {},
   "scripts": {
